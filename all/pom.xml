@@ -22,8 +22,8 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-        <artifactId>aem-guides-wknd-spa.react</artifactId>
+        <groupId>com.tushar.react</groupId>
+        <artifactId>aem-guides-tushar-react</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -31,10 +31,10 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>aem-guides-wknd-spa.react.all</artifactId>
+    <artifactId>aem-guides-tushar-react.all</artifactId>
     <packaging>content-package</packaging>
-    <name>WKND SPA React - All</name>
-    <description>All content package for WKND SPA React</description>
+    <name>AEM Guides Tushar react - All</name>
+    <description>All content package for AEM Guides Tushar react</description>
 
     <!-- ====================================================================== -->
     <!-- B U I L D   D E F I N I T I O N                                        -->
@@ -49,43 +49,33 @@
                 <artifactId>filevault-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <group>com.adobe.aem.guides.wkndspa.react</group>
+                    <group>com.tushar.react</group>
                     <packageType>container</packageType>
                     <!-- skip sub package validation for now as some vendor packages like CIF apps will not pass -->
                     <skipSubPackageValidation>true</skipSubPackageValidation>
                     <embeddeds>
                         <embedded>
-                            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-                            <artifactId>aem-guides-wknd-spa.react.ui.apps</artifactId>
+                            <groupId>com.tushar.react</groupId>
+                            <artifactId>aem-guides-tushar-react.ui.apps</artifactId>
                             <type>zip</type>
-                            <target>/apps/wknd-spa-react-packages/application/install</target>
+                            <target>/apps/aem-guides-tushar-react-packages/application/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-                            <artifactId>aem-guides-wknd-spa.react.core</artifactId>
-                            <target>/apps/wknd-spa-react-packages/application/install</target>
+                            <groupId>com.tushar.react</groupId>
+                            <artifactId>aem-guides-tushar-react.core</artifactId>
+                            <target>/apps/aem-guides-tushar-react-packages/application/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-                            <artifactId>aem-guides-wknd-spa.react.ui.content</artifactId>
+                            <groupId>com.tushar.react</groupId>
+                            <artifactId>aem-guides-tushar-react.ui.content</artifactId>
                             <type>zip</type>
-                            <target>/apps/wknd-spa-react-packages/content/install</target>
+                            <target>/apps/aem-guides-tushar-react-packages/content/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-                            <artifactId>aem-guides-wknd-spa.react.ui.config</artifactId>
+                            <groupId>com.tushar.react</groupId>
+                            <artifactId>aem-guides-tushar-react.ui.config</artifactId>
                             <type>zip</type>
-                            <target>/apps/wknd-spa-react-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.core</artifactId>
-                            <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.ui.apps</artifactId>
-                            <target>/apps/wknd-spa-react-vendor-packages/application/install</target>
+                            <target>/apps/aem-guides-tushar-react-packages/application/install</target>
                         </embedded>
                     </embeddeds>
                 </configuration>
@@ -189,33 +179,23 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-            <artifactId>aem-guides-wknd-spa.react.ui.apps</artifactId>
+            <groupId>com.tushar.react</groupId>
+            <artifactId>aem-guides-tushar-react.ui.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-            <artifactId>aem-guides-wknd-spa.react.ui.content</artifactId>
+            <groupId>com.tushar.react</groupId>
+            <artifactId>aem-guides-tushar-react.ui.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem.guides.wkndspa.react</groupId>
-            <artifactId>aem-guides-wknd-spa.react.ui.config</artifactId>
+            <groupId>com.tushar.react</groupId>
+            <artifactId>aem-guides-tushar-react.ui.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
 
-        <!-- SPA Project Core (includes hierarchy page) -->
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.ui.apps</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.core</artifactId>
-        </dependency>
     </dependencies>
 </project>
