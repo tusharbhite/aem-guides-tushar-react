@@ -339,13 +339,38 @@
                     clientlibsJsHead="aem-guides-tushar-react.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
+                <policy_spa
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="AEM Guides Tushar react SPA Page Policy"
+                    clientlibs="[aem-guides-tushar-react.react]"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_spa>
             </page>
+            <spa jcr:primaryType="nt:unstructured">
+                <default
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="AEM Guides Tushar react App Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    clientlibs="[aem-guides-tushar-react.react]"
+                    isRoot="{Boolean}true"
+                    structureDepth="3"
+                />
+            </spa>
         </components>
     </aem-guides-tushar-react>
     <wcm jcr:primaryType="nt:unstructured">
         <foundation jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
                 <responsivegrid jcr:primaryType="nt:unstructured">
+                        <spa-default
+                        jcr:description="Includes only SPA-Enabled components."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SPA Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:AEM Guides Tushar react - Content]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </spa-default>
             
                 </responsivegrid>
             </components>

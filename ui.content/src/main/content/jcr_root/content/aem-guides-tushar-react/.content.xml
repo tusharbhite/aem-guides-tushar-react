@@ -4,8 +4,8 @@
     <jcr:content
         cq:allowedTemplates="[/conf/aem-guides-tushar-react/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/aem-guides-tushar-react"
-        cq:redirectTarget="/content/aem-guides-tushar-react/us/en"
-        cq:template="/conf/aem-guides-tushar-react/settings/wcm/templates/page-content"
+        cq:redirectTarget="/content/aem-guides-tushar-react/us/en/home"
+        cq:template="/conf/aem-guides-tushar-react/settings/wcm/templates/spa-app-template"
         jcr:primaryType="cq:PageContent"
         jcr:title="AEM Guides Tushar react"
         sling:configRef="/conf/aem-guides-tushar-react"
